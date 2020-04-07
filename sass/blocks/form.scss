@@ -123,11 +123,11 @@
   margin-bottom: 15px;
 }
     
-.form--invalid .subscribing-form__error--bottom {
+.form--invalid .form__error--bottom {
   display: block;
 }
   
-.form__item--invalid .form__error {
+.form__input-wrap--invalid .form__error {
   display: block;
 }
 
@@ -198,4 +198,3 @@
 		font-size: 15px;
 	}
 }
-

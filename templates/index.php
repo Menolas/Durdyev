@@ -68,16 +68,20 @@
 		<div class="reviews__pop-up  pop-up  <?php if(count($errors) > 0) { echo 'pop-up--shown';}; ?>">
 			<form class="form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendmail.php">
 				<div class="form__close-btn"><span></span></div>
-				<div class="form__input-wrap">
-					<input type="text" name="name" placeholder="Benedict" required>
+				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
+					<input type="text" name="name" placeholder="Benedict" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
+					<span class="form__error">Введите email</span>
 				</div>
-				<div class="form__input-wrap">
-					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" required>
+				<div class="form__input-wrap  <?php if(isset($errors['email'])) { echo 'form__input-wrap--invalid';}; ?>">
+					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
+					<span class="form__error">Введите имя</span>
 				</div>
-				<div class="form__input-wrap  form__input-wrap--checkbox">
-                    <input type="checkbox" name="accept" id="accept-reviews-block" required checked>
-                    <label class="form__label  form__label--checkbox" for="accept-reviews-block">Заполняя эту форму, я даю согласие на обработку моих данных</label>
+				<div class="form__input-wrap  form__input-wrap--checkbox  <?php if(isset($errors['accept'])) { echo 'form__input-wrap--invalid';}; ?>">
+                    <input type="checkbox" name="accept" id="accept-reviews" checked>
+                    <label class="form__label  form__label--checkbox" for="accept-reviews">Заполняя эту форму, я даю согласие на обработку моих данных</label>
+                    <span class="form__error">Дайте согласие на обработку ваших данных (адеса електронной почты)</span>
                 </div>
+                <span class="form__error form__error--bottom">Пожалуйста, исправьте ошибки в форме.</span>
 				<input  class="form__btn  btn" type="submit" value="Получить доступ">
 			</form>
 		</div>

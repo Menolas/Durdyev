@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // проверка чекнут ли чекбокс согласия на обработку данных
 
-    if(isset($_POST['accept']) && $_POST['accept'] = "") {
+    if(!isset($_POST['accept'])) {
 
         $errors['accept'] = 'Согласитесь на обработку данных';
     }
@@ -83,7 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if($result !== 1) { // если письмо не было отправлено
             
             $errors['sendmail'] = 'К сожалению не удалось отправить Вашу заявку. Попробуйте заполнить форму еще раз через несколько минут.';
+
             print($errors['sendmail']);
+
         } else {
             
             $page_content = include_template('mailsent.php', [
@@ -97,12 +99,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             print($layout_content);
         }
+    } else {
+
+        $page_content = include_template('index.php', [
+            'errors' => $errors,
+            'values' => $values]);
+
+        $layout_content = include_template('layout.php', [
+            'page_content' => $page_content,
+            'errors' => $errors,
+            'title' => $title]);
+
+        print($layout_content);
     }
 }
-
-var_dump($errors);
-var_dump($values);
-
-
-
-
