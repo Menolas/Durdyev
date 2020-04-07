@@ -1,0 +1,58 @@
+.social-block {
+	
+}
+
+.social-block__list {
+	@include list-style;
+	display: flex;
+	flex-direction: column;
+}
+
+.social-block__item {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+	padding-left: 42px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.social-block__item span {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.social-block__item span svg {
+	width: 20px;
+	height: 20px;
+	fill: $background-blue;
+}
+
+.social-block__link {
+	position: relative;
+	@include link-style;
+	color: $background-blue;
+	font-weight: 600;
+
+	&::before {
+		@include element-style(100%, 1px, $background-blue);
+		bottom: -4px;
+		left: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+  
+  .social-block__item {
+	  padding-left: 52px;
+	}
+	
+  .social-block__item span svg {
+		width: 30px;
+		height: 30px;
+	}
+}

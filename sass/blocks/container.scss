@@ -1,0 +1,39 @@
+.container {
+	position: relative;
+	margin: 0 auto;
+	min-width: 320px;
+}
+
+.container--shaded::before {
+	@include element-style(100%, 100%, rgba(255, 255, 255, 0.9));
+	left: 0;
+	top: 0;
+}
+
+@media (min-width: 768px) {
+
+	.container {
+	  width: 768px;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.container {
+	  padding-top: 60px;
+	  width: 1024px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		width: 1440px;
+	}
+}
+
+@media (min-width: 1920px) {
+
+	.container {
+		width: 1920px;
+	}
+}

@@ -1,0 +1,38 @@
+.unsubscribing {
+	display: flex;
+	margin-top: 25px;
+}
+
+.unsubscribing__link {
+	position: relative;
+	@include link-style;
+	color: $background-blue;
+
+	&::before {
+		@include element-style(100%, 1px, $background-blue);
+		left: 0;
+		bottom: 2px;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.unsubscribing {
+		margin-top: 40px;
+		font-size: 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.unsubscribing {
+		margin-top: 60px;
+	}
+}
+
+@media (min-width: 1440px) {
+
+	.unsubscribing {
+		margin-top: 90px;
+	}
+}

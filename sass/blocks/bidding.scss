@@ -1,0 +1,30 @@
+.bidding {
+	margin: 0 auto;
+	padding-bottom: 30px;
+	width: 80%;
+	text-align: center;
+	font-weight: 600;
+	font-size: 15px;
+	color: $background-blue;
+}
+
+@media (min-width: 768px) {
+
+	.bidding {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.bidding {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 1440px) {
+
+	.bidding {
+		font-size: 32px;
+	}
+}
