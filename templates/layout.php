@@ -11,11 +11,13 @@
 	<body>
 		<div class="container">
 			<header class="main-header">
-				<div class="header-block">
-					<h1 class="header-block__title title">Как пережить<br>кризис<br>и выйти из него победителем</h1>
-					<p class="header-block__text">
-						Проверенные способы от Сергея Дурдыева &#8212; Бизнес-тренера,<br>психолога, специалиста по выходу из кризисных ситуаций
-					</p>
+				<div class="main-header__inner-wrap">
+					<div class="header-block">
+						<h1 class="header-block__title title">Как пережить<br>кризис<br>и выйти из него победителем</h1>
+						<p class="header-block__text">
+							Проверенные способы от Сергея Дурдыева &#8212; Бизнес-тренера,<br>психолога, специалиста по выходу из кризисных ситуаций
+						</p>
+					</div>
 				</div>
 			</header>
 			<?=$page_content;?>

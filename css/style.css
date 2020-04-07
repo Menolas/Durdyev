@@ -111,7 +111,8 @@ textarea {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   left: 0;
-  top: 0; }
+  top: 0;
+  z-index: 20; }
 
 @media (min-width: 768px) {
   .container {
@@ -119,7 +120,6 @@ textarea {
 
 @media (min-width: 1024px) {
   .container {
-    padding-top: 60px;
     width: 1024px; } }
 
 @media (min-width: 1440px) {
@@ -247,7 +247,8 @@ textarea {
   background-color: #ffffff;
   border: 1px solid #0089ad;
   border-radius: 4px;
-  box-shadow: 0 0 80px 2px rgba(43, 46, 102, 0.2); }
+  box-shadow: 0 0 80px 2px rgba(43, 46, 102, 0.2);
+  z-index: 30; }
 
 .pop-up--shown {
   display: block; }
@@ -338,7 +339,7 @@ textarea {
   width: 12px;
   height: 8px;
   background-color: transparent;
-  left: 14px;
+  left: 15px;
   top: 30%;
   border: 2px solid #ffffff;
   border-top: none;
@@ -397,7 +398,7 @@ textarea {
 
 @media (min-width: 768px) {
   .form input[type="checkbox"]:checked + label::after {
-    left: 15px; } }
+    top: 36%; } }
 
 @media (min-width: 1024px) {
   ::-webkit-input-placeholder {
@@ -443,7 +444,6 @@ textarea {
 
 @media (min-width: 768px) {
   .main-header {
-    padding-top: 24px;
     background-image: url("../img/sergey-768.jpg");
     background-position: right -40px bottom -20px;
     background-position: right -40px bottom 0; } }
@@ -451,11 +451,17 @@ textarea {
 @media (min-width: 1024px) {
   .main-header {
     padding: 0 4.6%;
-    padding-top: 30px;
-    background-image: url("../img/sergey-1024.jpg"); } }
+    padding-top: 50px;
+    background-image: none; }
+  .main-header__inner-wrap {
+    background-image: url("../img/sergey-1024.jpg");
+    background-repeat: no-repeat;
+    background-position: right -20px bottom -10px; } }
 
 @media (min-width: 1440px) {
   .main-header {
+    padding-top: 66px; }
+  .main-header__inner-wrap {
     background-image: url("../img/sergey-1440.jpg"); } }
 
 .header-block {

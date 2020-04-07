@@ -68,7 +68,7 @@
 
 .form input[type="checkbox"]:checked + label::after {
 	@include element-style(12px, 8px, transparent);
-	left: 14px;
+	left: 15px;
 	top: 30%;
 	border: 2px solid $white;
 	border-top: none;
@@ -134,7 +134,7 @@
 @media (min-width: 768px) {
 
 	.form input[type="checkbox"]:checked + label::after {
-		left: 15px;
+		top: 36%;
 	}
 }
 

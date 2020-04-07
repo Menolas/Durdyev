@@ -7,7 +7,6 @@
 @media (min-width: 768px) {
 
 	.main-header {
-		padding-top: 24px;
 		background-image: url('../img/sergey-768.jpg');
 		background-position: right -40px bottom -20px;
 		background-position: right -40px bottom 0;
@@ -18,14 +17,24 @@
 
 	.main-header {
 		padding: 0 4.6%;
-		padding-top: 30px;
+		padding-top: 50px;
+		background-image: none;
+	}
+
+	.main-header__inner-wrap {
 		background-image: url('../img/sergey-1024.jpg');
+		background-repeat: no-repeat;
+		background-position: right -20px bottom -10px;
 	}
 }
 
 @media (min-width: 1440px) {
 
 	.main-header {
-		background-image: url('../img/sergey-1440.jpg');
+		padding-top: 66px;
+	}
+  
+  .main-header__inner-wrap {
+	  background-image: url("../img/sergey-1440.jpg");
 	}
 }
