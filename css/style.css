@@ -42,7 +42,6 @@ font-face {
 
 /* colors */
 * {
-  outline: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -206,6 +205,8 @@ textarea {
   position: absolute;
   left: 0;
   top: 50%;
+  width: 20px;
+  height: 20px;
   transform: translate(0, -50%); }
 
 .social-block__item span svg {
@@ -227,12 +228,15 @@ textarea {
     width: 100%;
     height: 1px;
     background-color: #0089ad;
-    bottom: -4px;
+    bottom: -2px;
     left: 0; }
 
 @media (min-width: 1024px) {
   .social-block__item {
     padding-left: 52px; }
+  .social-block__item span {
+    width: 30px;
+    height: 30px; }
   .social-block__item span svg {
     width: 30px;
     height: 30px; } }
@@ -815,21 +819,11 @@ textarea {
     margin-top: 90px; } }
 
 .new-customer-message {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   padding: 32px 4.6%;
   padding-top: 54px;
   text-align: center;
   color: #0089ad;
-  font-weight: 500;
-  width: 300px;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border: 1px solid #0089ad;
-  border-radius: 4px;
-  box-shadow: 0 0 80px 2px rgba(43, 46, 102, 0.2); }
+  font-weight: 500; }
 
 .new-customer-message p {
   margin-bottom: 8px; }
@@ -840,48 +834,29 @@ textarea {
 .new-customer-message__bidding {
   font-size: 18px; }
 
-.new-customer-message--shown {
-  display: block; }
-
-.new-customer-message__close-btn {
-  position: absolute;
-  top: 15px;
-  right: 12px;
-  width: 22px;
-  height: 22px; }
-
-.new-customer-message__close-btn span {
-  position: absolute;
+.new-customer-message a {
   display: block;
-  top: 10px;
-  left: 2px;
-  width: 20px;
-  height: 2px;
-  background-color: #0089ad;
-  transform: rotate(45deg); }
-  .new-customer-message__close-btn span::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: #0089ad;
-    transform: rotate(90deg); }
+  color: inherit;
+  text-decoration: none;
+  margin-top: 15px; }
 
 @media (min-width: 768px) {
   .new-customer-message {
     padding-top: 42px;
-    padding-bottom: 38px; }
+    padding-bottom: 48px; }
   .new-customer-message p {
     margin-bottom: 12px; }
   .new-customer-message__greeting {
     font-size: 18px; }
   .new-customer-message__bidding {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .new-customer-message a {
+    margin-top: 35px; } }
 
 @media (min-width: 1024px) {
   .new-customer-message {
-    width: 500px;
+    padding-top: 52px;
+    padding-bottom: 68px;
     font-size: 18px; }
   .new-customer-message p {
     margin-bottom: 18px; }
@@ -892,11 +867,13 @@ textarea {
 
 @media (min-width: 1440px) {
   .new-customer-message {
-    width: 650px;
+    padding-bottom: 75px;
     font-size: 22px; }
   .new-customer-message p {
     margin-bottom: 22px; }
   .new-customer-message__greeting {
     font-size: 28px; }
   .new-customer-message__bidding {
-    font-size: 36px; } }
+    font-size: 36px; }
+  .new-customer-message a {
+    margin-top: 45px; } }

@@ -8,7 +8,7 @@
 		</div>
 		<button class="video__access-btn  btn">Получи доступ всего за 5$</button>
 
-		<div class="video__pop-up  pop-up">
+		<div class="video__pop-up  pop-up  <?php if(count($errors) > 0) { echo 'pop-up--shown';}; ?>">
 			<form class="form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendmail.php">
 				<div class="form__close-btn"><span></span></div>
 				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
@@ -58,10 +58,14 @@
 			</li>
 			<li class="reviews__item">
 				<div class="reviews__reviewer-portret">
-					<img src="img/reviewer-portret-1.jpg" alt="счастливый участник курса">
+					<picture>
+						<source media="(min-width: 1440px)" srcset="img/reviewer-portret-4-desktop.jpg">
+						<source media="(min-width: 1024px)" srcset="img/reviewer-portret-4-tablet.jpg">
+						<img src="img/reviewer-portret-4-mobile.jpg" alt="счастливый участник курса">
+					</picture>
 				</div>
-				<span class="reviews__reviewer-name">Васенька Пупочкин</span>
-				<p class="reviews__text">Зашибись курс. Зашибись помогло. Теперь ваще не парюсь и могу ваще всьо</p>
+				<span class="reviews__reviewer-name">Елена Кунина</span>
+				<p class="reviews__text">Это было увлекательно и интересно, ведь что может быть более увлекательным, чем встреча с самим собой, настоящим. Мы так много не знаем о себе, как выяснилось после курса) Простые и не очень упражнения и практики позволили мне встретиться лицом к лицу со своими глубинными страхами, о которых я не подозревала, убеждениями, которые разрушали мою жизнь а также показали мне мои сильные стороны. Мечты превратились в реальные планы и мир заблистал новыми красками. Спасибо Сергею.</p>
 			</li>
 		</ul>
 		<button class="reviews__access-btn  btn">Получи доступ всего за 5$</button>

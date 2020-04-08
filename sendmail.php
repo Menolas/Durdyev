@@ -82,9 +82,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if($result !== 1) { // если письмо не было отправлено
             
-            $errors['sendmail'] = 'К сожалению не удалось отправить Вашу заявку. Попробуйте заполнить форму еще раз через несколько минут.';
+            $page_content = include_template('mail-not-sent.php', [
+                'errors' => $errors,
+                'values' => $values]);
+            
+            $layout_content = include_template('layout.php', [
+                'page_content' => $page_content,
+                'errors' => $errors,
+                'title' => $title]);
 
-            print($errors['sendmail']);
+            print($layout_content);
 
         } else {
             
