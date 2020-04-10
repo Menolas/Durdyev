@@ -11,6 +11,7 @@
 }
 
 .reviews__list {
+	position: relative;
 	@include list-style;
 	display: grid;
 	grid-template-columns: auto;
@@ -101,7 +102,7 @@
 	}
 
 	.reviews__list {
-		width: 95%;
+		width: 85%;
 	}
 
 	.reviews__item {

@@ -243,7 +243,7 @@ textarea {
 
 .pop-up {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   width: 280px;
@@ -301,21 +301,25 @@ textarea {
 
 ::-webkit-input-placeholder {
   color: #0089ad;
-  font-weight: 500; }
+  font-weight: 500;
+  opacity: 0.7; }
 
 ::-moz-placeholder {
   color: #0089ad;
-  font-weight: 500; }
+  font-weight: 500;
+  opacity: 0.7; }
 
 /* Firefox 19+ */
 :-moz-placeholder {
   color: #0089ad;
-  font-weight: 500; }
+  font-weight: 500;
+  opacity: 0.7; }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
   color: #0089ad;
-  font-weight: 500; }
+  font-weight: 500;
+  opacity: 0.7; }
 
 .form input[type="checkbox"] {
   display: none; }
@@ -611,6 +615,7 @@ textarea {
   display: none; }
 
 .reviews__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -683,7 +688,7 @@ textarea {
   .reviews__title {
     margin-bottom: 32px; }
   .reviews__list {
-    width: 95%; }
+    width: 85%; }
   .reviews__item {
     grid-template-columns: 80px auto;
     padding: 18px; }
@@ -877,3 +882,8 @@ textarea {
     font-size: 36px; }
   .new-customer-message a {
     margin-top: 45px; } }
+
+@media (min-width: 768px) {
+  .admin {
+    margin: 0 auto;
+    width: 500px; } }

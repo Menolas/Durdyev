@@ -12,11 +12,11 @@
 			<form class="admin__form  form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendlink.php">
 				<div class="form__close-btn"><span></span></div>
 				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="name" placeholder="Имя клиента">
+					<input type="text" name="name" placeholder="Benedict" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
 					<span class="form__error">Введите email</span>
 				</div>
 				<div class="form__input-wrap  <?php if(isset($errors['email'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="email" placeholder="E-mail клиента">
+					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
 					<span class="form__error">Введите имя</span>
 				</div>
                 <span class="form__error form__error--bottom">Пожалуйста, исправьте ошибки в форме.</span>

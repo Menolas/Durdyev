@@ -12,11 +12,11 @@
 			<form class="form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendmail.php">
 				<div class="form__close-btn"><span></span></div>
 				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="name" placeholder="Benedict" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
+					<input type="text" name="name" placeholder="Ваше имя" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
 					<span class="form__error">Введите email</span>
 				</div>
 				<div class="form__input-wrap  <?php if(isset($errors['email'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
+					<input type="text" name="email" placeholder="youremail@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
 					<span class="form__error">Введите имя</span>
 				</div>
 				<div class="form__input-wrap  form__input-wrap--checkbox  <?php if(isset($errors['accept'])) { echo 'form__input-wrap--invalid';}; ?>">
@@ -37,10 +37,14 @@
 		<ul class="reviews__list">
 			<li class="reviews__item">
 				<div class="reviews__reviewer-portret">
-					<img src="img/reviewer-portret-1.jpg" alt="счастливый участник курса">
+					<picture>
+						<source media="(min-width: 1440px)" srcset="img/reviewer-portret-1-desktop.jpg">
+						<source media="(min-width: 1024px)" srcset="img/reviewer-portret-1-tablet.jpg">
+						<img src="img/reviewer-portret-1-mobile.jpg" alt="счастливый участник курса">
+					</picture>
 				</div>
-				<span class="reviews__reviewer-name">Васенька Пупочкин</span>
-				<p class="reviews__text">Зашибись курс. Зашибись помогло. Теперь ваще не парюсь и могу ваще всьо</p>
+				<span class="reviews__reviewer-name">Владислава Короткова</span>
+				<p class="reviews__text">Мне очень понравился ваш курс, особенно техники. Я заметила, что я стала более спокойной, позитивной, интенсивность моих страхов стала намного меньше просто за время курса. Даже моя семья заметила позитивные изменения. Очень понравились ваши медитации, состояние после них чудесное. Появилась вера в себя. Очень благодарна вам за ваш курс, техники, обратную связь. Я планирую ещё пересматривать все видео и отработать до конца все задния. Надеюсь будем на связи.</p>
 			</li>
 			<li class="reviews__item">
 				<div class="reviews__reviewer-portret">
@@ -73,11 +77,11 @@
 			<form class="form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendmail.php">
 				<div class="form__close-btn"><span></span></div>
 				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="name" placeholder="Benedict" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
+					<input type="text" name="name" placeholder="Ваше имя" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
 					<span class="form__error">Введите email</span>
 				</div>
 				<div class="form__input-wrap  <?php if(isset($errors['email'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
+					<input type="text" name="email" placeholder="youremail@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
 					<span class="form__error">Введите имя</span>
 				</div>
 				<div class="form__input-wrap  form__input-wrap--checkbox  <?php if(isset($errors['accept'])) { echo 'form__input-wrap--invalid';}; ?>">

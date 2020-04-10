@@ -26,11 +26,11 @@
 					<form class="form  <?php if(count($errors) > 0) { echo 'form--invalid';}; ?>" method="POST" action="sendmail.php">
 				<div class="form__close-btn"><span></span></div>
 				<div class="form__input-wrap  <?php if(isset($errors['name'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="name" placeholder="Benedict" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
+					<input type="text" name="name" placeholder="Ваше имя" value="<?= isset($values['name']) ? $values['name'] : '' ?>">
 					<span class="form__error">Введите email</span>
 				</div>
 				<div class="form__input-wrap  <?php if(isset($errors['email'])) { echo 'form__input-wrap--invalid';}; ?>">
-					<input type="text" name="email" placeholder="benedictcumberbatch@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
+					<input type="text" name="email" placeholder="youremail@gmail.com" value="<?= isset($values['email']) ? $values['email'] : '' ?>">
 					<span class="form__error">Введите имя</span>
 				</div>
 				<div class="form__input-wrap  form__input-wrap--checkbox  <?php if(isset($errors['accept'])) { echo 'form__input-wrap--invalid';}; ?>">
@@ -103,5 +103,6 @@
 			</symbol>
 		</svg>
 		<script src="js/pop-up.js"></script>
+		<script src="js/review-animation.js"></script>
 	</body>
 </html>
