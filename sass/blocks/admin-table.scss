@@ -1,0 +1,21 @@
+.admin-table {
+	margin: 0 auto;
+	margin-bottom: 50px;
+	width: 700px;
+}
+
+.admin-table table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.admin-table th,
+.admin-table td {
+	padding: 8px 15px;
+	border: 1px solid $black;
+}
+
+.admin-table__title {
+	margin-bottom: 25px;
+	text-align: center;
+}

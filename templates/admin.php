@@ -23,5 +23,43 @@
 				<input  class="form__btn  btn" type="submit" value="Отправить ссылку">
 			</form>
 		</div>
+        <div class="admin-table  admin-table__customers">
+        	<h2 class="admin-table__title">Высланы реквизиты на оплату</h2>
+			<table>
+				<tr>
+					<th>&#8470;</th>
+					<th>Дата</th>
+					<th>Имя</th>
+					<th>email</th>
+				</tr>
+				<?php foreach ($customers as $customer): ?>
+					<tr>
+						<td><?=$customer['id'];?></td>
+						<td><?=$customer['created_at'];?></td>
+						<td><?=$customer['name'];?></td>
+						<td><?=$customer['email'];?></td>
+					</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
+		<div class="admin-table  admin-table__participants">
+        	<h2 class="admin-table__title">Участники курса</h2>
+			<table>
+				<tr>
+					<th>&#8470;</th>
+					<th>Дата</th>
+					<th>Имя</th>
+					<th>email</th>
+				</tr>
+				<?php foreach ($participants as $participant): ?>
+					<tr>
+						<td><?=$participant['id'];?></td>
+						<td><?=$participant['created_at'];?></td>
+						<td><?=$participant['name'];?></td>
+						<td><?=$participant['email'];?></td>
+					</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
 	</body>
 </html>

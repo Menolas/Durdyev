@@ -183,3 +183,47 @@ function db_insert_participant ($con, $email, $name) {
   return $res;
 }
 
+/**
+ * Добавить клиента в базу данных.
+ *
+ * @param object $con Ссылка для подключения к базе данных
+ * 
+ * @return object|false
+ */
+function db_get_customers ($con) {
+
+  $sql = "
+    SELECT * FROM customers ORDER BY id ASC;";
+    
+  $res = db_run_query($con, $sql);
+
+  if (!$res) {
+    $error = mysqli_error($con);
+    print("Ошибка MySQL" . $error);
+    die();
+  }
+  return $res;
+}
+
+/**
+ * Добавить клиента в базу данных.
+ *
+ * @param object $con Ссылка для подключения к базе данных
+ * 
+ * @return object|false
+ */
+function db_get_participants ($con) {
+
+  $sql = "
+    SELECT * FROM participants ORDER BY id ASC;";
+    
+  $res = db_run_query($con, $sql);
+
+  if (!$res) {
+    $error = mysqli_error($con);
+    print("Ошибка MySQL" . $error);
+    die();
+  }
+  return $res;
+}
+

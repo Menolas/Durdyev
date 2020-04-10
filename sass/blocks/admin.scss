@@ -1,6 +1,13 @@
 @media (min-width: 768px) {
 	.admin {
 		margin: 0 auto;
+		margin-bottom: 80px;
+		padding-top: 80px;
 	  width: 500px;
+  }
+
+  .admin__form {
+  	border: 1px solid $background-blue;
+	  border-radius: 4px;
   }
 }

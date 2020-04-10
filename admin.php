@@ -2,13 +2,13 @@
 
 require('init.php');
 
-$title = 'Выход из кризиса';
+$title = 'Админ страничка';
+$customers = db_get_customers($link);
+$participants = db_get_participants($link);
 
 $page_content = include_template('admin.php', [
-    'title' => $title]);
-
-$layout_content = include_template('layout.php', [
-    'page_content' => $page_content,
-    'title' => $title]);
+    'title' => $title,
+    'customers' => $customers,
+    'participants' => $participants]);
 
 print($page_content);

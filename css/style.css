@@ -302,24 +302,24 @@ textarea {
 ::-webkit-input-placeholder {
   color: #0089ad;
   font-weight: 500;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 ::-moz-placeholder {
   color: #0089ad;
   font-weight: 500;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 /* Firefox 19+ */
 :-moz-placeholder {
   color: #0089ad;
   font-weight: 500;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
   color: #0089ad;
   font-weight: 500;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .form input[type="checkbox"] {
   display: none; }
@@ -886,4 +886,27 @@ textarea {
 @media (min-width: 768px) {
   .admin {
     margin: 0 auto;
-    width: 500px; } }
+    margin-bottom: 80px;
+    padding-top: 80px;
+    width: 500px; }
+  .admin__form {
+    border: 1px solid #0089ad;
+    border-radius: 4px; } }
+
+.admin-table {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 700px; }
+
+.admin-table table {
+  border-collapse: collapse;
+  margin: 0 auto; }
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 15px;
+  border: 1px solid #000000; }
+
+.admin-table__title {
+  margin-bottom: 25px;
+  text-align: center; }
